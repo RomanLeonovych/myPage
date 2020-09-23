@@ -46,7 +46,7 @@ a {
 
 /*Main Screen*/
 .main_scr {
-    background: url("../img/main_back.png") no-repeat center center/cover;
+    background: url("../img/main_back.jp2") no-repeat center center/cover;
     position: relative;
 }
 
@@ -368,10 +368,7 @@ a {
 }
 
 /*WHAT WE DO*/
-.what_we_do {
-    /*background: url('../img/what_we_do_back.png') no-repeat center center/cover;*/
-    /*position: relative;*/
-}
+
 
 .what_we_do .wrapper {
     display: flex;
@@ -388,19 +385,14 @@ a {
 
 
 .left_item img {
-    /*margin: 1rem;*/
-    /*height: 400px;*/
-    /*width: 350px;*/
     height: 50vh;
 }
 
 .mid_item img {
-    /*margin: 1rem;*/
     height: 50vh;
 }
 
 .right_item img {
-    /*margin: 1rem;*/
     height: 50vh;
 }
 
@@ -412,9 +404,6 @@ a {
 
 /*ABOUT ME*/
 
-.about_me {
-    /*background: url('../img/about_me.png') no-repeat center center/cover;*/
-}
 
 .about_me .wrapper {
     padding: 4rem 6rem 6rem 6rem;
@@ -475,10 +464,6 @@ a {
 
 /*GALLERY*/
 
-.gallery {
-    /*background: url('../img/gallery_back.png') no-repeat center center/cover;*/
-    /*margin: 5rem 0;*/
-}
 
 .slider_names {
     display: flex;
@@ -495,21 +480,6 @@ a {
     background: #f9e9f4;
 }
 
-/*.background:first-child {*/
-/*    background: url("../img/back_for_slider_1.svg") no-repeat center center/100%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding: 0.5rem 0.5rem 0 0;*/
-/*}*/
-
-/*.background:last-child {*/
-/*    background: url("../img/back_for_slider_2.svg") no-repeat center center/100%;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-
-/*}*/
 
 .background_1 {
     background: url("../img/back_for_slider_1.svg") no-repeat center center/100%;
@@ -643,7 +613,7 @@ a {
 
 .slider-item {
     color: #69577f;
-    text-align: left;
+    display: flex;
     height: 350px;
     background: #f9e9f4;
     border-right: 1px dashed #69577f;
@@ -801,7 +771,8 @@ a {
 .main_footer {
     width: 100%;
     height: 20vh;
-    background: url("../img/footer_background.png") no-repeat center center;
+    min-height: 250px;
+    background: url("../img/footer_background.jp2") no-repeat center center;
     text-align: center;
 }
 
@@ -1056,9 +1027,9 @@ a {
         width: 100%;
     }
 
-    .main_footer {
-        height: 200px;
-    }
+    /*.main_footer {*/
+    /*    height: 200px;*/
+    /*}*/
 
 }
 
@@ -1103,4 +1074,6 @@ a {
     }
 
 }
+
+
 

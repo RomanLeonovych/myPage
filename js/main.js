@@ -116,8 +116,6 @@ observer.observe(document.querySelector('.testimonials'))
 observer.observe(document.querySelector('.contact_us'))
 
 
-//Взять массив тегов а и повесить на них прослушку, если они нажимаются, то менять статус сheckboxa на unchecked
-
 const links = document.querySelectorAll(".menu_link");
 const hamburger = document.querySelector(".checkbox-toggle");
 
