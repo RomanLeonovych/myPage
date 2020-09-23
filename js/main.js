@@ -27,44 +27,21 @@ $(".navbar a").on("click", function (event) {
     }
 });
 
+// //Smooth scrolling for mob
+$(".navbar_mob a").on("click", function (event) {
+    if (this.hash !== "") {
+        event.preventDefault();
 
-// window.onload = () => {
-//     const options = {
-//         // родитель целевого элемента - область просмотра
-//         root: null,
-//         // без отступов
-//         rootMargin: '0px',
-//         // процент пересечения - половина изображения
-//         threshold: 0.5
-//     }
-//     const observer = new IntersectionObserver((entries, observer) => {
-//         // для каждой записи-целевого элемента
-//         entries.forEach(entry => {
-//             // если элемент является наблюдаемым
-//             if (entry.isIntersecting) {
-//                 const section = entry.target
-//                 // выводим информацию в консоль - проверка работоспособности наблюдателя
-//                 console.log(section)
-//                 // меняем фон контейнера
-//                 // section.style.background = 'deepskyblue'
-//
-//                 // прекращаем наблюдение
-//                 observer.unobserve(section)
-//             }
-//         })
-//     }, options)
-//
-//     // с помощью цикла следим за всеми img на странице
-//     // const arr = document.querySelectorAll('img')
-//     // arr.forEach(i => {
-//     //     observer.observe(i)
-//     // })
-//
-//     const arr = document.querySelectorAll('section')
-//     arr.forEach(i => {
-//         observer.observe(i)
-//     })
-// }
+        const hash = this.hash;
+
+        $("html, body").animate(
+            {
+                scrollTop: $(hash).offset().top - 100,
+            },
+            800
+        );
+    }
+});
 
 
 //Animate About Us
@@ -109,13 +86,11 @@ let logoAnim = anime({
 });
 
 window.onload = function () {
-    // window.setTimeout(function () {
-        document.body.classList.add('loaded_hiding');
-        window.setTimeout(function () {
-            document.body.classList.add('loaded');
-            document.body.classList.remove('loaded_hiding');
-        }, 500);
-    // }, 1000)
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+    }, 500);
 }
 
 
@@ -140,5 +115,18 @@ observer.observe(document.querySelector('.gallery'))
 observer.observe(document.querySelector('.testimonials'))
 observer.observe(document.querySelector('.contact_us'))
 
+
+//Взять массив тегов а и повесить на них прослушку, если они нажимаются, то менять статус сheckboxa на unchecked
+
+const links = document.querySelectorAll(".menu_link");
+const hamburger = document.querySelector(".checkbox-toggle");
+
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        if (hamburger.checked) {
+            hamburger.checked = false;
+        }
+    })
+})
 
 
