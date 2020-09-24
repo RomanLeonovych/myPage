@@ -109,4 +109,7 @@ const options = {
     "retina_detect": true
 }
 
-particlesJS("particles-container", options);
+if (window.screen.width >= 982) {
+    particlesJS("particles-container", options);
+}
+
