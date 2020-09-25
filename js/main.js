@@ -104,13 +104,14 @@ let observer = new IntersectionObserver((entries, observer) => {
         // }
     })
 }, {
-    threshold: .5
+    threshold: .2
 })
 
 observer.observe(document.querySelector('.left_item'))
 observer.observe(document.querySelector('.mid_item'))
 observer.observe(document.querySelector('.right_item'))
 observer.observe(document.querySelector('.about_me_block'))
+observer.observe(document.querySelector('.about_me_block_mob'))
 observer.observe(document.querySelector('.gallery'))
 observer.observe(document.querySelector('.testimonials'))
 observer.observe(document.querySelector('.contact_us'))
