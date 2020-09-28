@@ -27,21 +27,21 @@ $(".navbar a").on("click", function (event) {
     }
 });
 
-// //Smooth scrolling for mob
-$(".navbar_mob a").on("click", function (event) {
-    if (this.hash !== "") {
-        event.preventDefault();
-
-        const hash = this.hash;
-
-        $("html, body").animate(
-            {
-                scrollTop: $(hash).offset().top - 100,
-            },
-            800
-        );
-    }
-});
+// // //Smooth scrolling for mob
+// $(".navbar_mob a").on("click", function (event) {
+//     if (this.hash !== "") {
+//         event.preventDefault();
+//
+//         const hash = this.hash;
+//
+//         $("html, body").animate(
+//             {
+//                 scrollTop: $(hash).offset().top - 100,
+//             },
+//             800
+//         );
+//     }
+// });
 
 
 //Animate About Us
@@ -74,10 +74,9 @@ let logoAnim = anime({
     delay: 100,
     targets: ".preload_logo",
     // duration: 6000,
-    duration: 500,
+    duration: 900,
     easing: 'linear',
     opacity: 0,
-    // rotate: '1turn',
     keyframes: [
         {scale: 0},
         {opacity: 1, scale: 1.2},
@@ -90,7 +89,7 @@ window.onload = function () {
     window.setTimeout(function () {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
-    }, 500);
+    }, 900);
 }
 
 

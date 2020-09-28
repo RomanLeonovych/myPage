@@ -1,5 +1,5 @@
 // Slider testimonials
- const testimSlider = () => {
+const testimSlider = () => {
     let position = 0;
     const slidesToShow = 1;
     const slidesToScroll = 1;
@@ -48,16 +48,18 @@
         btnPrev.disabled = position === 0;
         btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
         if (btnPrev.disabled) {
-            btnPrev.style.color = "grey";
-            btnPrev.addEventListener('mouseover', () => {
-                btnPrev.style.color = 'grey';
-                btnPrev.style.cursor = 'initial';
-            })
-            btnPrev.addEventListener('mouseout', () => {
-                btnPrev.style.color = 'grey';
-                btnPrev.style.cursor = 'initial';
-            })
+            // btnPrev.style.color = "grey";
+            // btnPrev.addEventListener('mouseover', () => {
+            //     btnPrev.style.color = 'grey';
+            //     btnPrev.style.cursor = 'initial';
+            // })
+            // btnPrev.addEventListener('mouseout', () => {
+            //     btnPrev.style.color = 'grey';
+            //     btnPrev.style.cursor = 'initial';
+            // })
+            btnPrev.style.visibility = 'hidden'
         } else if (!btnPrev.disabled) {
+            btnPrev.style.visibility = 'visible'
             btnPrev.style.color = "#69577f";
             btnPrev.addEventListener('mouseover', () => {
                 btnPrev.style.color = '#9481AC';
@@ -68,12 +70,14 @@
             })
         }
         if (btnNext.disabled) {
-            btnNext.style.color = "grey";
-            btnNext.addEventListener('mouseover', () => {
-                btnNext.style.color = 'grey';
-                btnNext.style.cursor = 'initial';
-            })
+            // btnNext.style.color = "grey";
+            // btnNext.addEventListener('mouseover', () => {
+            //     btnNext.style.color = 'grey';
+            //     btnNext.style.cursor = 'initial';
+            // })
+            btnNext.style.visibility = 'hidden'
         } else if (!btnNext.disabled) {
+            btnNext.style.visibility = 'visible'
             btnNext.style.color = "#69577f";
             btnNext.addEventListener('mouseover', () => {
                 btnNext.style.color = '#9481AC';
@@ -88,7 +92,7 @@
 };
 
 //Slider photo_1
- const photoSlider1 = () => {
+const photoSlider1 = () => {
     let position = 0;
     const slidesToShow = 1;
     const slidesToScroll = 1;
